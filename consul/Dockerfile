@@ -1,5 +1,5 @@
 # base image
-FROM alpine:3.14
+FROM alpine:3.17
 
 # set consul version
 ENV CONSUL_VERSION 1.15.0
