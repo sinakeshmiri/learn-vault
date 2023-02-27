@@ -2,7 +2,7 @@
 FROM alpine:3.14
 
 # set consul version
-ENV CONSUL_VERSION 1.10.2
+ENV CONSUL_VERSION 1.15.0
 
 # create a new directory
 RUN mkdir /consul
