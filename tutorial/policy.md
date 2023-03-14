@@ -11,14 +11,45 @@
   
   only list?
   
-  ![image](https://user-images.githubusercontent.com/72389059/224930221-b5e2f3f6-1bac-4d25-b67f-c503655b1a98.png)
-  
+  <kbd>
+  <img src=https://user-images.githubusercontent.com/72389059/224930221-b5e2f3f6-1bac-4d25-b67f-c503655b1a98.png>
+  </kbd>
 
 
-   default policy is to **deny**
+
+
+  default policy is to **deny**
+   
   sudo allows you to access all under root
   
+  
+  
+  
+  enable secret engine
+  
+   `vault secrets enable -path=secret/ kv`
+   
+  write a policy
     
+    path "secret/data/training data"{
+      capabilites = ["create,"read"]
+    }
+  
+   apply policy
+   
+    `vault policy write testpolicy testpolicy.hcl`
+   
+   
+   create token with a policy
+   
+    `vault token create -policy="testpolicy"`
+    
+    
+   login with it!
+   
+    `vault login`
+    
+ 
   
 # SENTINEL:
   - enterprise level
@@ -57,9 +88,10 @@
     # sentinel test
     
     ```
+  <kbd>
+  <img src=https://user-images.githubusercontent.com/72389059/224937074-62d8eb64-233f-4639-bf24-633eb59e7f0e.png alt="fail" width="300" height="200">
+  <img src=https://user-images.githubusercontent.com/72389059/224937294-7b949119-c067-4982-9279-1b94496fc689.png alt="success" width="300" height="200">
+ <img src=https://user-images.githubusercontent.com/72389059/224937163-377e0722-05f2-455e-9ed8-8f22f94bffbb.png alt="policy" width="350" height="200">
 
-  ![image](https://user-images.githubusercontent.com/72389059/224937074-62d8eb64-233f-4639-bf24-633eb59e7f0e.png)
-  ![image](https://user-images.githubusercontent.com/72389059/224937294-7b949119-c067-4982-9279-1b94496fc689.png)
-  ![image](https://user-images.githubusercontent.com/72389059/224937163-377e0722-05f2-455e-9ed8-8f22f94bffbb.png)
+  </kbd>
 
-    
