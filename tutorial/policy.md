@@ -55,7 +55,16 @@
       |-  fails!
       
     `vault kv put secret/data/trainig_data password="FFFFF"`
-   
+___
+   an other one:
+     
+     ```
+     vault  login
+     vault token  create -policy="read_data"
+     vault token capablities secret/data/trainig_data
+     vault kv put  secret/data/trainig_data key="val"
+     ```
+     
      
 # SENTINEL:
   - enterprise level
