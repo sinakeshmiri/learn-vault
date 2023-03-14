@@ -48,9 +48,15 @@
    login with it!
    
     `vault login`
+   
+   try it!
     
- 
-  
+    `vault  kv put  secret/some_key key=some_key`
+      |-  fails!
+      
+    `vault kv put secret/data/trainig_data password="FFFFF"`
+   
+     
 # SENTINEL:
   - enterprise level
   - condtions are available
@@ -92,6 +98,5 @@
   <img src=https://user-images.githubusercontent.com/72389059/224937074-62d8eb64-233f-4639-bf24-633eb59e7f0e.png alt="fail" width="300" height="200">
   <img src=https://user-images.githubusercontent.com/72389059/224937294-7b949119-c067-4982-9279-1b94496fc689.png alt="success" width="300" height="200">
  <img src=https://user-images.githubusercontent.com/72389059/224937163-377e0722-05f2-455e-9ed8-8f22f94bffbb.png alt="policy" width="350" height="200">
-
   </kbd>
 
